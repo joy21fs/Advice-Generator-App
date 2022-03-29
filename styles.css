@@ -43,9 +43,9 @@ picture {
 
 body {
   width: 100%;
-  overflow: hidden;
-  height: 100vh;
   min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   line-height: 1.5; /* more readable than the default 1.2 */
   /* font-family: ; the paragraph text */
   font-family: "Manrope", sans-serif;
@@ -167,7 +167,7 @@ select {
   border: 0.25rem solid var(--clr-light);
 }
 
-.fetch-btn::after {
+/* .fetch-btn::after {
   content: "↖ Click for another piece of advice!";
   position: absolute;
   bottom: -1rem;
@@ -180,7 +180,7 @@ select {
 .fetch-btn:hover::after {
   font-size: 0.8rem;
   color: hsl(150, 80%, 20%);
-}
+} */
 
 footer {
   position: absolute;
@@ -198,7 +198,7 @@ footer {
     padding-block: 0.5rem 2rem;
   }
 
-  .fetch-btn::after {
+  /* .fetch-btn::after {
     white-space: nowrap;
-  }
+  } */
 }
