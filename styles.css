@@ -51,6 +51,7 @@ body {
   font-size: 1rem;
   text-align: center;
   background-color: var(--bg-body);
+  position: relative;
 }
 
 /* make form elements easier to work with */
@@ -168,7 +169,7 @@ select {
 .fetch-btn::after {
   content: "↖ Click for another piece of advice!";
   position: absolute;
-  bottom: -2rem;
+  bottom: -1rem;
   left: 100%;
   width: 15ch;
   font-size: 0.8rem;
@@ -182,7 +183,7 @@ select {
 
 footer {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 5px;
 }
 
 @media (min-width: 30em) {
@@ -194,5 +195,9 @@ footer {
 
   .pattern-divider {
     padding-block: 0.5rem 2rem;
+  }
+
+  .fetch-btn::after {
+    white-space: nowrap;
   }
 }
