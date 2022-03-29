@@ -43,7 +43,8 @@ picture {
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
   min-height: 100vh;
   line-height: 1.5; /* more readable than the default 1.2 */
   /* font-family: ; the paragraph text */
