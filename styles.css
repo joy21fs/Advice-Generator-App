@@ -165,20 +165,20 @@ select {
   border: 0.25rem solid var(--clr-light);
 }
 
-/* .fetch-btn::after {
-  content: "← Click for another piece of advice!";
+.fetch-btn::after {
+  content: "↖ Click for another piece of advice!";
   position: absolute;
-  bottom: 0;
-  left: 115%;
+  bottom: -2rem;
+  left: 100%;
   width: 15ch;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   color: hsl(150, 50%, 20%);
 }
 
 .fetch-btn:hover::after {
   font-size: 0.8rem;
   color: hsl(150, 80%, 20%);
-} */
+}
 
 footer {
   position: absolute;
