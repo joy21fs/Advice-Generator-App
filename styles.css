@@ -1,0 +1,176 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  /* colors */
+  --bg-body: hsl(218, 23%, 20%);
+  --bg-shadow: hsl(218, 23%, 16%);
+  --bg-main: hsl(217, 19%, 24%);
+  /* --bg-: hsl(217, 19%, 38%); */
+  --clr-green: hsl(150, 100%, 66%);
+  --clr-light: hsl(193, 38%, 86%);
+
+  /* letter-spacing */
+
+  /* font-sizes */
+
+  /* font-families */
+}
+
+/* ------------------- */
+/* resets              */
+/* ------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5; /* more readable than the default 1.2 */
+  /* font-family: ; the paragraph text */
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: var(--bg-body);
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes    */
+/* ------------------- */
+
+/* general */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.wrapper {
+  /* prevent content from touching the edges */
+  padding: 1rem;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  /* clip: rect(0, 0, 0, 0); */
+  clip-path: inset(0, 0, 0, 0); /* newer property suggested on MDN */
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+
+/* typography */
+
+/* ------------------- */
+/* Content Specific   */
+/* ------------------- */
+.wrapper {
+  background-color: var(--bg-main);
+  border-radius: 10px;
+  box-shadow: 1.5rem 1.5rem 2.5rem 1rem var(--bg-shadow);
+  position: relative;
+  width: 90%;
+  margin-top: -5rem;
+}
+
+.wrapper::after {
+  position: absolute;
+  content: "";
+  background-image: url("images/icon-dice.svg");
+  background-color: var(--clr-green);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 50%;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+}
+
+.advice--title {
+  color: var(--clr-green);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.35rem;
+  margin-top: 2rem;
+}
+
+.advice--content {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-light);
+}
+
+.pattern-divider {
+  width: 100%;
+  padding-block: 0.5rem 3rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+@media (min-width: 30em) {
+  .wrapper {
+    margin-top: 0;
+    width: 30rem;
+    padding: 2.5rem;
+  }
+
+  .pattern-divider {
+    padding-block: 0.5rem 2rem;
+  }
+}
