@@ -36,7 +36,7 @@
     </style>
     <script src="index.js" defer></script>
   </head>
-  <body class="flex">
+  <body onload="getAdvice()" class="flex">
     <div class="wrapper flex">
       <header>
         <h1 class="advice--title">Advice #<!-- Advice ID goes here --></h1>
@@ -44,12 +44,14 @@
       <main>
         <p class="advice--content"><!-- Advice text goes here -->”</p>
       </main>
-
       <img
         class="pattern-divider"
         src="images/pattern-divider-mobile.svg"
         alt="pattern divider"
       />
+      <button onClick="getAdvice()" class="fetch-btn">
+        <span class="sr-only">Get another piece of advice!</span>
+      </button>
     </div>
 
     <footer class="attribution">

@@ -42,6 +42,8 @@ picture {
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100vh;
   line-height: 1.5; /* more readable than the default 1.2 */
   /* font-family: ; the paragraph text */
@@ -57,6 +59,7 @@ button,
 textarea,
 select {
   font: inherit;
+  border: none;
 }
 
 /* remove animations for people who've turned them off */
@@ -123,22 +126,6 @@ select {
   margin-top: -5rem;
 }
 
-.wrapper::after {
-  position: absolute;
-  content: "";
-  background-image: url("images/icon-dice.svg");
-  background-color: var(--clr-green);
-  background-size: 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 2rem;
-  border-radius: 50%;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%) translateY(-50%);
-  box-sizing: content-box;
-}
-
 .advice--title {
   color: var(--clr-green);
   text-transform: uppercase;
@@ -157,6 +144,41 @@ select {
   width: 100%;
   padding-block: 0.5rem 3rem;
 }
+
+.fetch-btn {
+  position: absolute;
+  background-image: url("images/icon-dice.svg");
+  background-color: var(--clr-green);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 50%;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.fetch-btn:hover {
+  border: 0.25rem solid var(--clr-light);
+}
+
+/* .fetch-btn::after {
+  content: "← Click for another piece of advice!";
+  position: absolute;
+  bottom: 0;
+  left: 115%;
+  width: 15ch;
+  font-size: 0.5rem;
+  color: hsl(150, 50%, 20%);
+}
+
+.fetch-btn:hover::after {
+  font-size: 0.8rem;
+  color: hsl(150, 80%, 20%);
+} */
 
 footer {
   position: absolute;
